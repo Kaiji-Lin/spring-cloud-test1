@@ -8,13 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hystrix" />
         <module name="zuul" />
-        <module name="ribbon" />
+        <module name="consumer" />
+        <module name="configclient" />
         <module name="nativeconfigserver" />
         <module name="feign" />
         <module name="nativeconfigclient" />
-        <module name="resttemplate2" />
+        <module name="ribbon" />
+        <module name="configserver" />
         <module name="eurekaserver" />
-        <module name="consumer" />
+        <module name="resttemplate2" />
         <module name="eurekaclient" />
       </profile>
     </annotationProcessing>
@@ -24,6 +26,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="configclient" options="-parameters" />
+      <module name="configserver" options="-parameters" />
       <module name="consumer" options="-parameters" />
       <module name="eurekaclient" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />

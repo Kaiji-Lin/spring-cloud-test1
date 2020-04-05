@@ -11,9 +11,6 @@
     <modules>
         <module>eurekaserver</module>
         <module>eurekaclient</module>
-        <module>resttemplate</module>
-        <module>resttemplate</module>
-        <module>resttemplate</module>
         <module>resttemplate2</module>
         <module>consumer</module>
         <module>zuul</module>
@@ -22,6 +19,8 @@
         <module>hystrix</module>
         <module>nativeconfigserver</module>
         <module>nativeconfigclient</module>
+        <module>configserver</module>
+        <module>configclient</module>
     </modules>
 
     <parent>
