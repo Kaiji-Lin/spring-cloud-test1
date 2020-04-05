@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: configclient
+  profiles:       #    要读取的配置文件的名字为上面的name于这个active的名字结合起来
+    active: dev   #    中间会自动用横杠连接，既名字为configclient-dev.yml
+  cloud:
+    config:
+      uri: http://localhost:8762  #    这是要读取的本地配置仓库服务的端口
+      fail-fast: true    #    设置客户端优先判断配置仓库服务是否正常
+      #配置文件是可以互补作用的，因此从仓库读取的配置文件可以和本地的bootstrap.yml配置文件共同结合起作用
