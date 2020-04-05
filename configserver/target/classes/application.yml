@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Kaiji-Lin/spring-cloud-test1.git #仓库路径
+          search-paths: config #加载的github仓库中的文件夹
+          username: Kaiji-Lin #github用户名和密码
+          password: lkj663300
+      label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

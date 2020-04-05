@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      name: configclient #当前服务在服务中心的注册名，要和在配置服务中找的配置文件名相同
+      label: master
+      discovery:
+        enabled: true
+        service-id: configserver #配置中心在服务中心注册的名称，然后会和它关联起来并在其中获取配置文件
+eureka:             #配置服务会获取git仓库，然后在它自己的配置文件中的search-paths定义的路径中
+  client:           #寻找本配置文件（bootstrap.yml）中config.name指明需要的configclient文件
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
